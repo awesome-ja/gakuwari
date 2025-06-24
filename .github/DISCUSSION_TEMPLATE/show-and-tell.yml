@@ -1,0 +1,68 @@
+title: "🎉 Show & Tell"
+labels: [discussion, show-and-tell]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        🎉 **Show & Tell!** 
+        
+        Share how you're using URL Note Taker! This is a place to:
+        - Show off your creative use cases
+        - Share workflows and productivity tips
+        - Demonstrate customizations or modifications
+        - Inspire others with your success stories
+        
+        We love seeing how our community uses this tool!
+
+  - type: textarea
+    id: what-sharing
+    attributes:
+      label: What Are You Sharing?
+      description: Tell us what you'd like to show the community
+      placeholder: Describe what you're sharing - a workflow, customization, use case, etc.
+    validations:
+      required: true
+
+  - type: textarea
+    id: how-works
+    attributes:
+      label: How It Works
+      description: Explain how your solution/workflow/use case works
+      placeholder: Walk us through your process, setup, or implementation...
+
+  - type: textarea
+    id: why-useful
+    attributes:
+      label: Why It's Useful
+      description: What problem does this solve or what benefit does it provide?
+      placeholder: Explain the benefits and why others might find this helpful...
+
+  - type: textarea
+    id: screenshots-examples
+    attributes:
+      label: Screenshots or Examples
+      description: Share screenshots, code snippets, or examples
+      placeholder: |
+        You can drag and drop images here or paste:
+        - Screenshots of your setup
+        - Code snippets (if applicable)
+        - Links to examples
+        - Step-by-step instructions
+
+  - type: textarea
+    id: tips-tricks
+    attributes:
+      label: Tips & Tricks
+      description: Any additional tips or tricks you'd like to share?
+      placeholder: Pro tips, gotchas to avoid, optimization suggestions, etc.
+
+  - type: checkboxes
+    id: sharing-permissions
+    attributes:
+      label: Sharing Permissions
+      description: How can others use your contribution?
+      options:
+        - label: Others can freely use and adapt my ideas
+        - label: Others can use my ideas with attribution
+        - label: Please ask before using my specific implementation
+        - label: This is just for inspiration/demonstration

@@ -1,0 +1,46 @@
+title: "General Discussion"
+labels: [discussion]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        👋 Welcome to our discussion forum! 
+        
+        This is a place to:
+        - Ask questions about using URL Note Taker
+        - Share tips and tricks
+        - Discuss potential improvements
+        - Connect with other users
+        
+        Please be respectful and follow our community guidelines.
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Discussion Category
+      description: What type of discussion is this?
+      options:
+        - General Question
+        - Usage Tips
+        - Ideas & Suggestions
+        - Show & Tell
+        - Help Wanted
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: content
+    attributes:
+      label: Discussion Content
+      description: What would you like to discuss?
+      placeholder: Share your thoughts, questions, or ideas...
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Any additional context that might be helpful
+      placeholder: Browser version, specific use case, relevant links, etc.

@@ -1,0 +1,75 @@
+title: "❓ Help & Support"
+labels: [discussion, help, support]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ❓ **Need help?** 
+        
+        Ask your questions here! Our community is happy to help you get the most out of URL Note Taker.
+        
+        Before asking, please check:
+        - [README.md](../README.md) for basic usage
+        - [Wiki](../../wiki) for detailed documentation
+        - [Existing discussions](../../discussions) for similar questions
+
+  - type: dropdown
+    id: help-type
+    attributes:
+      label: Type of Help Needed
+      description: What kind of help do you need?
+      options:
+        - Installation Help
+        - Usage Question
+        - Configuration Issue
+        - Browser Compatibility
+        - Feature Not Working
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: What do you need help with?
+      placeholder: Please describe your question or issue in detail...
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-tried
+    attributes:
+      label: What Have You Tried?
+      description: What steps have you already tried to solve this?
+      placeholder: List any troubleshooting steps you've already attempted...
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser
+      description: Which browser are you using?
+      options:
+        - Chrome
+        - Firefox
+        - Safari
+        - Edge
+        - Other
+
+  - type: dropdown
+    id: userscript-manager
+    attributes:
+      label: Userscript Manager
+      description: Which userscript manager are you using?
+      options:
+        - Tampermonkey
+        - Greasemonkey
+        - Violentmonkey
+        - Other
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Additional Information
+      description: Any other details that might help us assist you
+      placeholder: Error messages, screenshots, specific websites, etc.

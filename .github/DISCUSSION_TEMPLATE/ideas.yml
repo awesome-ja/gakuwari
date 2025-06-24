@@ -1,0 +1,52 @@
+title: "💡 Ideas & Suggestions"
+labels: [discussion, ideas]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        💡 **Share your ideas!** 
+        
+        This is the perfect place to brainstorm new features, improvements, or any creative ideas for URL Note Taker.
+        
+        Your suggestions help make this project better for everyone!
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your Idea
+      description: What's your idea or suggestion?
+      placeholder: Describe your idea in detail...
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem It Solves
+      description: What problem does this idea solve or what improvement does it bring?
+      placeholder: Explain the benefit or problem this addresses...
+
+  - type: textarea
+    id: implementation
+    attributes:
+      label: Implementation Thoughts
+      description: Do you have any thoughts on how this could be implemented?
+      placeholder: Any technical considerations, UI mockups, or implementation ideas...
+
+  - type: checkboxes
+    id: involvement
+    attributes:
+      label: Involvement
+      description: Would you be interested in helping with this idea?
+      options:
+        - label: I'd be willing to help implement this
+        - label: I'd be willing to help test this
+        - label: I'd be willing to help with design/UX
+        - label: I'm just sharing the idea for others to consider
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: Examples or References
+      description: Any examples, references, or similar implementations you've seen?
+      placeholder: Links to similar features, screenshots, or examples...

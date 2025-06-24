@@ -1,0 +1,79 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.sublime-*
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+*.cache
+
+# Node.js (if you add build tools later)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+package-lock.json
+yarn.lock
+
+# Development files
+*.dev.js
+*.test.js
+test/
+tests/
+coverage/
+.nyc_output
+
+# Distribution files (if you create minified versions)
+dist/
+build/
+*.min.js
+*.map
+
+# Personal notes and configs
+notes.md
+todo.md
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Confidential documentation
+claude.secret.md
+claude.log
+
+# Internal tools and scripts
+project-internals/
+
+# Archive files
+*.zip
+*.tar
+*.gz
+*.rar
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# utils
+project-meta
+tmp
+restic-backup

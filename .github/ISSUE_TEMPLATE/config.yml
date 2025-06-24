@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 General Discussion
+    url: https://github.com/URL-Note-Taker/core/discussions
+    about: Ask questions and discuss ideas with the community
+  - name: 📖 Documentation
+    url: https://github.com/URL-Note-Taker/core/wiki
+    about: Check the wiki for detailed documentation
+  - name: 🔒 Security Issues
+    url: https://github.com/URL-Note-Taker/core/issues
+    about: Please report security vulnerabilities via GitHub issues
