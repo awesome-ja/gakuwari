@@ -1,75 +1,75 @@
-title: "❓ Help & Support"
+title: "❓ ヘルプとサポート"
 labels: [discussion, help, support]
 body:
   - type: markdown
     attributes:
       value: |
-        ❓ **Need help?** 
+        ❓ **ヘルプが必要ですか？** 
         
-        Ask your questions here! Our community is happy to help you get the most out of URL Note Taker.
+        ここで質問してください！コミュニティはあなたが学割サービスを最大限活用できるようサポートします。
         
-        Before asking, please check:
-        - [README.md](../README.md) for basic usage
-        - [Wiki](../../wiki) for detailed documentation
-        - [Existing discussions](../../discussions) for similar questions
+        質問する前に、以下をご確認ください：
+        - 基本的な使用方法は [README.md](../README.md)
+        - 詳細なドキュメントは [Wiki](../../wiki)
+        - 類似の質問は [既存のディスカッション](../../discussions)
 
   - type: dropdown
     id: help-type
     attributes:
-      label: Type of Help Needed
-      description: What kind of help do you need?
+      label: 必要なヘルプの種類
+      description: どのようなヘルプが必要ですか？
       options:
-        - Installation Help
-        - Usage Question
-        - Configuration Issue
-        - Browser Compatibility
-        - Feature Not Working
-        - Other
+        - インストールのヘルプ
+        - 使用方法の質問
+        - 設定の問題
+        - ブラウザの互換性
+        - 機能が動作しない
+        - その他
     validations:
       required: true
 
   - type: textarea
     id: question
     attributes:
-      label: Your Question
-      description: What do you need help with?
-      placeholder: Please describe your question or issue in detail...
+      label: あなたの質問
+      description: 何にヘルプが必要ですか？
+      placeholder: 質問や問題を詳しく説明してください...
     validations:
       required: true
 
   - type: textarea
     id: what-tried
     attributes:
-      label: What Have You Tried?
-      description: What steps have you already tried to solve this?
-      placeholder: List any troubleshooting steps you've already attempted...
+      label: これまでに試したこと
+      description: この問題を解決するために、これまでにどのような手順を試しましたか？
+      placeholder: これまでに試したトラブルシューティング手順をリストアップしてください...
 
   - type: dropdown
     id: browser
     attributes:
-      label: Browser
-      description: Which browser are you using?
+      label: ブラウザ
+      description: 使用しているブラウザを選択してください
       options:
         - Chrome
         - Firefox
         - Safari
         - Edge
-        - Other
+        - その他
 
   - type: dropdown
     id: userscript-manager
     attributes:
-      label: Userscript Manager
-      description: Which userscript manager are you using?
+      label: ユーザースクリプトマネージャー
+      description: 使用しているユーザースクリプトマネージャーを選択してください
       options:
         - Tampermonkey
         - Greasemonkey
         - Violentmonkey
-        - Other
+        - その他
 
   - type: textarea
     id: additional-info
     attributes:
-      label: Additional Information
-      description: Any other details that might help us assist you
-      placeholder: Error messages, screenshots, specific websites, etc.
+      label: 追加情報
+      description: サポートに役立つかもしれないその他の詳細
+      placeholder: エラーメッセージ、スクリーンショット、特定のウェブサイトなど

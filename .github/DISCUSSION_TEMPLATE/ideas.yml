@@ -1,52 +1,52 @@
-title: "💡 Ideas & Suggestions"
+title: "💡 アイデアと提案"
 labels: [discussion, ideas]
 body:
   - type: markdown
     attributes:
       value: |
-        💡 **Share your ideas!** 
+        💡 **アイデアを共有してください！** 
         
-        This is the perfect place to brainstorm new features, improvements, or any creative ideas for URL Note Taker.
+        ここは学割サービスのための新機能、改善、またはクリエイティブなアイデアをブレインストーミングするのに最適な場所です。
         
-        Your suggestions help make this project better for everyone!
+        あなたの提案は、このプロジェクトをみんなにとってより良いものにするのに役立ちます！
 
   - type: textarea
     id: idea
     attributes:
-      label: Your Idea
-      description: What's your idea or suggestion?
-      placeholder: Describe your idea in detail...
+      label: あなたのアイデア
+      description: あなたのアイデアや提案は何ですか？
+      placeholder: アイデアを詳しく説明してください...
     validations:
       required: true
 
   - type: textarea
     id: problem
     attributes:
-      label: Problem It Solves
-      description: What problem does this idea solve or what improvement does it bring?
-      placeholder: Explain the benefit or problem this addresses...
+      label: 解決する問題
+      description: このアイデアはどのような問題を解決し、どのような改善をもたらしますか？
+      placeholder: このアイデアがもたらす利益や解決する問題を説明してください...
 
   - type: textarea
     id: implementation
     attributes:
-      label: Implementation Thoughts
-      description: Do you have any thoughts on how this could be implemented?
-      placeholder: Any technical considerations, UI mockups, or implementation ideas...
+      label: 実装に関する考え
+      description: これをどのように実装できるかについて、何か考えはありますか？
+      placeholder: 技術的な検討事項、UIモックアップ、実装アイデアなど...
 
   - type: checkboxes
     id: involvement
     attributes:
-      label: Involvement
-      description: Would you be interested in helping with this idea?
+      label: 関与
+      description: このアイデアの実現に協力していただけますか？
       options:
-        - label: I'd be willing to help implement this
-        - label: I'd be willing to help test this
-        - label: I'd be willing to help with design/UX
-        - label: I'm just sharing the idea for others to consider
+        - label: 実装に協力したい
+        - label: テストに協力したい
+        - label: デザイン/UXに協力したい
+        - label: アイデアを共有するだけで、他の人に検討してもらいたい
 
   - type: textarea
     id: examples
     attributes:
-      label: Examples or References
-      description: Any examples, references, or similar implementations you've seen?
-      placeholder: Links to similar features, screenshots, or examples...
+      label: 例や参考資料
+      description: これまでに見たことのある例、参考資料、または類似の実装はありますか？
+      placeholder: 類似機能のリンク、スクリーンショット、例など...

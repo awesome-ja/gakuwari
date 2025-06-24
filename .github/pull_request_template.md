@@ -1,58 +1,58 @@
-## Summary
+## 概要
 
-Brief description of what this PR does.
+このPRが行うことの簡潔な説明。
 
-## Changes
+## 変更内容
 
-- [ ] Bug fix (non-breaking change which fixes an issue)
-- [ ] New feature (non-breaking change which adds functionality)
-- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
-- [ ] Documentation update
-- [ ] Code refactoring
-- [ ] Performance improvement
-- [ ] Other (please describe):
+- [ ] バグ修正（既存機能を壊さない問題修正）
+- [ ] 新機能（既存機能を壊さない機能追加）
+- [ ] 破壊的変更（既存機能が期待通り動作しなくなる修正や機能）
+- [ ] ドキュメント更新
+- [ ] コードリファクタリング
+- [ ] パフォーマンス改善
+- [ ] その他（詳細を記載してください）:
 
-## Detailed Description
+## 詳細説明
 
-Provide a more detailed explanation of your changes and why you made them.
+変更内容とその理由について、より詳細な説明を提供してください。
 
-## Testing
+## テスト
 
-Describe the tests you ran to verify your changes. Please also list any relevant details for your test configuration.
+変更を検証するために実行したテストを説明してください。テスト環境の関連詳細もリストしてください。
 
-- [ ] Tested on Chrome
-- [ ] Tested on Firefox
-- [ ] Tested on Safari
-- [ ] Tested on Edge
-- [ ] Tested with Tampermonkey
-- [ ] Tested with Greasemonkey
-- [ ] Tested with Violentmonkey
+- [ ] Chromeでテスト済み
+- [ ] Firefoxでテスト済み
+- [ ] Safariでテスト済み
+- [ ] Edgeでテスト済み
+- [ ] Tampermonkeyでテスト済み
+- [ ] Greasemonkeyでテスト済み
+- [ ] Violentmonkeyでテスト済み
 
-**Test Configuration**:
-- Browser version:
-- Userscript manager:
-- Operating System:
+**テスト環境**:
+- ブラウザバージョン:
+- ユーザースクリプトマネージャー:
+- オペレーティングシステム:
 
-## Screenshots (if applicable)
+## スクリーンショット（該当する場合）
 
-Add screenshots to help explain your changes.
+変更内容の説明に役立つスクリーンショットを追加してください。
 
-## Related Issues
+## 関連Issue
 
-Closes #(issue number)
-Fixes #(issue number)
-Related to #(issue number)
+Closes #(イシュー番号)
+Fixes #(イシュー番号)
+Related to #(イシュー番号)
 
-## Checklist
+## チェックリスト
 
-- [ ] My code follows the code style of this project
-- [ ] I have performed a self-review of my own code
-- [ ] I have commented my code, particularly in hard-to-understand areas
-- [ ] I have made corresponding changes to the documentation
-- [ ] My changes generate no new warnings or errors
-- [ ] I have tested my changes across multiple browsers
-- [ ] I have checked that my changes don't break existing functionality
+- [ ] コードはこのプロジェクトのコードスタイルに従っている
+- [ ] 自分のコードのセルフレビューを実行した
+- [ ] 特に理解が困難な部分にコメントを追加した
+- [ ] ドキュメントに対応する変更を行った
+- [ ] 変更により新しい警告やエラーが発生しない
+- [ ] 複数のブラウザで変更をテストした
+- [ ] 変更が既存機能を壊さないことを確認した
 
-## Additional Notes
+## 追加メモ
 
-Add any additional notes, concerns, or questions here.
+ここに追加のメモ、懸念事項、または質問を追加してください。

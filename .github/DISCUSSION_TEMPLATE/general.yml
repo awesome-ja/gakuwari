@@ -1,46 +1,46 @@
-title: "General Discussion"
+title: "一般的な議論"
 labels: [discussion]
 body:
   - type: markdown
     attributes:
       value: |
-        👋 Welcome to our discussion forum! 
+        👋 ディスカッションフォーラムへようこそ！
         
-        This is a place to:
-        - Ask questions about using URL Note Taker
-        - Share tips and tricks
-        - Discuss potential improvements
-        - Connect with other users
+        ここは以下のための場所です：
+        - 学割サービスの使用に関する質問
+        - コツや裏技の共有
+        - 潜在的な改善点の議論
+        - 他のユーザーとの交流
         
-        Please be respectful and follow our community guidelines.
+        敬意を持ち、コミュニティガイドラインに従ってください。
 
   - type: dropdown
     id: category
     attributes:
-      label: Discussion Category
-      description: What type of discussion is this?
+      label: 議論のカテゴリ
+      description: どのような種類の議論ですか？
       options:
-        - General Question
-        - Usage Tips
-        - Ideas & Suggestions
-        - Show & Tell
-        - Help Wanted
-        - Other
+        - 一般的な質問
+        - 使用法のコツ
+        - アイデアと提案
+        - ショーアンドテル
+        - ヘルプ募集
+        - その他
     validations:
       required: true
 
   - type: textarea
     id: content
     attributes:
-      label: Discussion Content
-      description: What would you like to discuss?
-      placeholder: Share your thoughts, questions, or ideas...
+      label: 議論内容
+      description: 何を議論したいですか？
+      placeholder: あなたの考え、質問、アイデアを共有してください...
     validations:
       required: true
 
   - type: textarea
     id: context
     attributes:
-      label: Additional Context
-      description: Any additional context that might be helpful
-      placeholder: Browser version, specific use case, relevant links, etc.
+      label: 追加情報
+      description: 役に立つかもしれない追加情報
+      placeholder: ブラウザバージョン、具体的な使用例、関連リンクなど

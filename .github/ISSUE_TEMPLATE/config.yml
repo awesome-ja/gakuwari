@@ -1,11 +1,11 @@
 blank_issues_enabled: false
 contact_links:
-  - name: 💬 General Discussion
+  - name: 💬 一般的な議論
     url: https://github.com/URL-Note-Taker/core/discussions
-    about: Ask questions and discuss ideas with the community
-  - name: 📖 Documentation
+    about: コミュニティで質問や意見交換をする
+  - name: 📖 ドキュメント
     url: https://github.com/URL-Note-Taker/core/wiki
-    about: Check the wiki for detailed documentation
-  - name: 🔒 Security Issues
+    about: 詳細なドキュメントはWikiをご確認ください
+  - name: 🔒 セキュリティ問題
     url: https://github.com/URL-Note-Taker/core/issues
-    about: Please report security vulnerabilities via GitHub issues
+    about: セキュリティの脆弱性はGitHub Issues経由で報告してください

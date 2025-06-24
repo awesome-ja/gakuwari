@@ -1,68 +1,68 @@
-title: "🎉 Show & Tell"
+title: "🎉 ショーアンドテル"
 labels: [discussion, show-and-tell]
 body:
   - type: markdown
     attributes:
       value: |
-        🎉 **Show & Tell!** 
+        🎉 **ショーアンドテル！** 
         
-        Share how you're using URL Note Taker! This is a place to:
-        - Show off your creative use cases
-        - Share workflows and productivity tips
-        - Demonstrate customizations or modifications
-        - Inspire others with your success stories
+        学割サービスの使い方を共有してください！ここは以下のための場所です：
+        - クリエイティブな使用例の紹介
+        - ワークフローや生産性向上のコツの共有
+        - カスタマイズや改造のデモンストレーション
+        - 成功例で他の人をインスパイア
         
-        We love seeing how our community uses this tool!
+        コミュニティがこのツールをどのように使用しているかを見るのが大好きです！
 
   - type: textarea
     id: what-sharing
     attributes:
-      label: What Are You Sharing?
-      description: Tell us what you'd like to show the community
-      placeholder: Describe what you're sharing - a workflow, customization, use case, etc.
+      label: 何を共有しますか？
+      description: コミュニティに紹介したいことを教えてください
+      placeholder: 共有したいことを説明してください - ワークフロー、カスタマイズ、使用例など
     validations:
       required: true
 
   - type: textarea
     id: how-works
     attributes:
-      label: How It Works
-      description: Explain how your solution/workflow/use case works
-      placeholder: Walk us through your process, setup, or implementation...
+      label: どのように動作するか
+      description: あなたの解決策/ワークフロー/使用例がどのように機能するか説明してください
+      placeholder: プロセス、セットアップ、実装について歩いて説明してください...
 
   - type: textarea
     id: why-useful
     attributes:
-      label: Why It's Useful
-      description: What problem does this solve or what benefit does it provide?
-      placeholder: Explain the benefits and why others might find this helpful...
+      label: なぜ役に立つのか
+      description: これはどのような問題を解決し、どのような利益を提供しますか？
+      placeholder: 利益と他の人がこれを役に立つと思う理由を説明してください...
 
   - type: textarea
     id: screenshots-examples
     attributes:
-      label: Screenshots or Examples
-      description: Share screenshots, code snippets, or examples
+      label: スクリーンショットや例
+      description: スクリーンショット、コード断片、または例を共有してください
       placeholder: |
-        You can drag and drop images here or paste:
-        - Screenshots of your setup
-        - Code snippets (if applicable)
-        - Links to examples
-        - Step-by-step instructions
+        ここに画像をドラッグ&ドロップするか、以下を貼り付けてください：
+        - セットアップのスクリーンショット
+        - コード断片（該当する場合）
+        - 例へのリンク
+        - ステップバイステップの手順
 
   - type: textarea
     id: tips-tricks
     attributes:
-      label: Tips & Tricks
-      description: Any additional tips or tricks you'd like to share?
-      placeholder: Pro tips, gotchas to avoid, optimization suggestions, etc.
+      label: コツと裏技
+      description: 共有したい追加のコツや裏技はありますか？
+      placeholder: プロのコツ、避けるべき落とし穴、最適化の提案など
 
   - type: checkboxes
     id: sharing-permissions
     attributes:
-      label: Sharing Permissions
-      description: How can others use your contribution?
+      label: 共有許可
+      description: 他の人はあなたの貢献をどのように使用できますか？
       options:
-        - label: Others can freely use and adapt my ideas
-        - label: Others can use my ideas with attribution
-        - label: Please ask before using my specific implementation
-        - label: This is just for inspiration/demonstration
+        - label: 他の人は私のアイデアを自由に使用し、適応できます
+        - label: 他の人は出典を明記して私のアイデアを使用できます
+        - label: 私の具体的な実装を使用する前にお聞きください
+        - label: これはインスパイア/デモンストレーションのためだけです
