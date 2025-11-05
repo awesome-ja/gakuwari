@@ -1,0 +1,212 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Gakuwari Services Schema",
+  "description": "Schema for Japanese student discount services database",
+  "type": "object",
+  "required": ["version", "lastUpdated", "categories", "metadata"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Semantic version of the data format"
+    },
+    "lastUpdated": {
+      "type": "string",
+      "format": "date",
+      "description": "Date when the data was last updated (YYYY-MM-DD)"
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/category"
+      },
+      "description": "List of service categories"
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["totalCategories", "totalServices", "repository", "license"],
+      "properties": {
+        "totalCategories": {
+          "type": "integer",
+          "description": "Total number of categories"
+        },
+        "totalServices": {
+          "type": "integer",
+          "description": "Total number of services"
+        },
+        "maintainers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of project maintainers"
+        },
+        "repository": {
+          "type": "string",
+          "format": "uri",
+          "description": "GitHub repository URL"
+        },
+        "license": {
+          "type": "string",
+          "description": "Project license"
+        }
+      }
+    }
+  },
+  "definitions": {
+    "category": {
+      "type": "object",
+      "required": ["id", "name", "nameEn", "icon", "services"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique category identifier"
+        },
+        "name": {
+          "type": "string",
+          "description": "Category name in Japanese"
+        },
+        "nameEn": {
+          "type": "string",
+          "description": "Category name in English"
+        },
+        "icon": {
+          "type": "string",
+          "description": "Emoji icon for the category"
+        },
+        "services": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/service"
+          },
+          "description": "List of services in this category"
+        }
+      }
+    },
+    "service": {
+      "type": "object",
+      "required": ["id", "name", "provider", "type", "discount", "eligibility", "url", "status"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique service identifier"
+        },
+        "name": {
+          "type": "string",
+          "description": "Service name"
+        },
+        "provider": {
+          "type": "string",
+          "description": "Service provider/company name"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["subscription", "license", "credit", "discount"],
+          "description": "Type of service offering"
+        },
+        "discount": {
+          "$ref": "#/definitions/discount",
+          "description": "Discount information"
+        },
+        "eligibility": {
+          "$ref": "#/definitions/eligibility",
+          "description": "Eligibility requirements"
+        },
+        "verificationMethod": {
+          "type": "string",
+          "description": "How students verify their eligibility"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Official service URL"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["active", "inactive", "discontinued", "unknown"],
+          "description": "Current status of the discount offer"
+        },
+        "lastVerified": {
+          "type": ["string", "null"],
+          "format": "date",
+          "description": "Date when the information was last verified (YYYY-MM-DD)"
+        },
+        "features": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of features included in the service"
+        },
+        "notes": {
+          "type": "string",
+          "description": "Additional notes or important information"
+        }
+      }
+    },
+    "discount": {
+      "type": "object",
+      "required": ["type", "duration", "currency"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["free", "percentage", "fixed-amount", "credit", "student-plan", "student-discount", "institutional"],
+          "description": "Type of discount offered"
+        },
+        "percentOff": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Percentage discount (0-100)"
+        },
+        "duration": {
+          "type": "string",
+          "description": "Duration of the discount (e.g., '学生期間中', '2年間')"
+        },
+        "originalPrice": {
+          "type": ["number", "null"],
+          "description": "Original price before discount"
+        },
+        "studentPrice": {
+          "type": ["number", "null"],
+          "description": "Price with student discount"
+        },
+        "currency": {
+          "type": "string",
+          "description": "Currency code (e.g., 'JPY', 'USD')"
+        },
+        "billingPeriod": {
+          "type": "string",
+          "description": "Billing period (e.g., '月額', '年間')"
+        }
+      }
+    },
+    "eligibility": {
+      "type": "object",
+      "required": ["studentTypes", "requirements"],
+      "properties": {
+        "studentTypes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Types of students eligible (e.g., '大学生', '高校生')"
+        },
+        "requirements": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Specific requirements for eligibility"
+        },
+        "exclusions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Exclusions or limitations"
+        }
+      }
+    }
+  }
+}

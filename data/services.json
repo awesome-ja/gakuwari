@@ -1,0 +1,666 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "version": "1.0.0",
+  "lastUpdated": "2025-11-05",
+  "categories": [
+    {
+      "id": "development",
+      "name": "開発・プログラミング",
+      "nameEn": "Development & Programming",
+      "icon": "🔧",
+      "services": [
+        {
+          "id": "github-pro",
+          "name": "GitHub Pro",
+          "provider": "GitHub",
+          "type": "subscription",
+          "discount": {
+            "type": "free",
+            "duration": "2年間",
+            "originalPrice": null,
+            "studentPrice": 0,
+            "currency": "JPY"
+          },
+          "eligibility": {
+            "studentTypes": ["大学生", "大学院生", "専門学校生", "高等専門学校生"],
+            "requirements": ["学生証明"]
+          },
+          "verificationMethod": "GitHub Student Developer Pack",
+          "url": "https://education.github.com/pack",
+          "status": "active",
+          "lastVerified": null,
+          "notes": "GitHub Student Developer Packで2年間無料"
+        },
+        {
+          "id": "github-copilot",
+          "name": "GitHub Copilot",
+          "provider": "GitHub",
+          "type": "subscription",
+          "discount": {
+            "type": "free",
+            "duration": "学生期間中",
+            "originalPrice": null,
+            "studentPrice": 0,
+            "currency": "JPY"
+          },
+          "eligibility": {
+            "studentTypes": ["学生"],
+            "requirements": ["学生証明"]
+          },
+          "verificationMethod": "GitHub Student Developer Pack",
+          "url": "https://education.github.com/pack",
+          "status": "active",
+          "lastVerified": null,
+          "notes": "学生は無料で利用可能"
+        },
+        {
+          "id": "jetbrains-intellij",
+          "name": "IntelliJ IDEA",
+          "provider": "JetBrains",
+          "type": "license",
+          "discount": {
+            "type": "free",
+            "duration": "学生・教職員期間中",
+            "originalPrice": null,
+            "studentPrice": 0,
+            "currency": "JPY"
+          },
+          "eligibility": {
+            "studentTypes": ["学生", "教職員"],
+            "requirements": ["認定された教育機関の学生・教職員"]
+          },
+          "verificationMethod": "学生証明書",
+          "url": "https://www.jetbrains.com/ja-jp/community/education/",
+          "status": "active",
+          "lastVerified": null,
+          "notes": "学生・教職員向け無料ライセンス"
+        },
+        {
+          "id": "jetbrains-pycharm",
+          "name": "PyCharm",
+          "provider": "JetBrains",
+          "type": "license",
+          "discount": {
+            "type": "free",
+            "duration": "学生・教職員期間中",
+            "originalPrice": null,
+            "studentPrice": 0,
+            "currency": "JPY"
+          },
+          "eligibility": {
+            "studentTypes": ["学生", "教職員"],
+            "requirements": ["認定された教育機関の学生・教職員"]
+          },
+          "verificationMethod": "学生証明書",
+          "url": "https://www.jetbrains.com/ja-jp/community/education/",
+          "status": "active",
+          "lastVerified": null,
+          "notes": "学生・教職員向け無料ライセンス"
+        },
+        {
+          "id": "jetbrains-webstorm",
+          "name": "WebStorm",
+          "provider": "JetBrains",
+          "type": "license",
+          "discount": {
+            "type": "free",
+            "duration": "学生・教職員期間中",
+            "originalPrice": null,
+            "studentPrice": 0,
+            "currency": "JPY"
+          },
+          "eligibility": {
+            "studentTypes": ["学生", "教職員"],
+            "requirements": ["認定された教育機関の学生・教職員"]
+          },
+          "verificationMethod": "学生証明書",
+          "url": "https://www.jetbrains.com/ja-jp/community/education/",
+          "status": "active",
+          "lastVerified": null,
+          "notes": "学生・教職員向け無料ライセンス"
+        },
+        {
+          "id": "jetbrains-clion",
+          "name": "CLion",
+          "provider": "JetBrains",
+          "type": "license",
+          "discount": {
+            "type": "free",
+            "duration": "学生・教職員期間中",
+            "originalPrice": null,
+            "studentPrice": 0,
+            "currency": "JPY"
+          },
+          "eligibility": {
+            "studentTypes": ["学生", "教職員"],
+            "requirements": ["認定された教育機関の学生・教職員"]
+          },
+          "verificationMethod": "学生証明書",
+          "url": "https://www.jetbrains.com/ja-jp/community/education/",
+          "status": "active",
+          "lastVerified": null,
+          "notes": "学生・教職員向け無料ライセンス"
+        },
+        {
+          "id": "microsoft-visual-studio",
+          "name": "Visual Studio",
+          "provider": "Microsoft",
+          "type": "license",
+          "discount": {
+            "type": "free",
+            "duration": "学生期間中",
+            "originalPrice": null,
+            "studentPrice": 0,
+            "currency": "JPY"
+          },
+          "eligibility": {
+            "studentTypes": ["学生"],
+            "requirements": ["学生証明"]
+          },
+          "verificationMethod": "学生証明書",
+          "url": "https://visualstudio.microsoft.com/ja/vs/community/",
+          "status": "active",
+          "lastVerified": null,
+          "notes": "学生向け無料ライセンス"
+        },
+        {
+          "id": "microsoft-azure",
+          "name": "Azure",
+          "provider": "Microsoft",
+          "type": "credit",
+          "discount": {
+            "type": "credit",
+            "duration": "学生期間中",
+            "originalPrice": null,
+            "studentPrice": 0,
+            "currency": "JPY"
+          },
+          "eligibility": {
+            "studentTypes": ["学生"],
+            "requirements": ["学生証明"]
+          },
+          "verificationMethod": "学生証明書",
+          "url": "https://azure.microsoft.com/ja-jp/free/students/",
+          "status": "active",
+          "lastVerified": null,
+          "notes": "学生向け無料クレジット"
+        },
+        {
+          "id": "microsoft-office365-education",
+          "name": "Office 365 Education",
+          "provider": "Microsoft",
+          "type": "subscription",
+          "discount": {
+            "type": "free",
+            "duration": "学生・教職員期間中",
+            "originalPrice": null,
+            "studentPrice": 0,
+            "currency": "JPY"
+          },
+          "eligibility": {
+            "studentTypes": ["学生", "教職員"],
+            "requirements": ["教育機関のメールアドレス"]
+          },
+          "verificationMethod": "学校メールアドレス",
+          "url": "https://www.microsoft.com/ja-jp/education/products/office",
+          "status": "active",
+          "lastVerified": null,
+          "notes": "学生・教職員向け無料"
+        }
+      ]
+    },
+    {
+      "id": "creative",
+      "name": "クリエイティブ・デザイン",
+      "nameEn": "Creative & Design",
+      "icon": "🎨",
+      "services": [
+        {
+          "id": "adobe-creative-cloud",
+          "name": "Adobe Creative Cloud",
+          "provider": "Adobe",
+          "type": "subscription",
+          "discount": {
+            "type": "percentage",
+            "percentOff": 60,
+            "duration": "学生・教職員期間中",
+            "originalPrice": null,
+            "studentPrice": null,
+            "currency": "JPY"
+          },
+          "eligibility": {
+            "studentTypes": ["高校生", "高専生", "専門学校生", "短大生", "大学生", "大学院生", "教職員"],
+            "requirements": ["高等学校、高等専門学校、専門学校、短期大学、大学、大学院"]
+          },
+          "verificationMethod": "学生証明書",
+          "url": "https://www.adobe.com/jp/creativecloud/buy/students.html",
+          "status": "active",
+          "lastVerified": null,
+          "notes": "学生・教職員向け60%オフ"
+        },
+        {
+          "id": "autodesk-autocad",
+          "name": "AutoCAD",
+          "provider": "Autodesk",
+          "type": "license",
+          "discount": {
+            "type": "free",
+            "duration": "学生・教職員期間中",
+            "originalPrice": null,
+            "studentPrice": 0,
+            "currency": "JPY"
+          },
+          "eligibility": {
+            "studentTypes": ["学生", "教職員"],
+            "requirements": ["認定教育機関"]
+          },
+          "verificationMethod": "学生証明書",
+          "url": "https://www.autodesk.co.jp/education/edu-software/overview",
+          "status": "active",
+          "lastVerified": null,
+          "notes": "学生・教職員向け無料"
+        },
+        {
+          "id": "autodesk-maya",
+          "name": "Maya",
+          "provider": "Autodesk",
+          "type": "license",
+          "discount": {
+            "type": "free",
+            "duration": "学生・教職員期間中",
+            "originalPrice": null,
+            "studentPrice": 0,
+            "currency": "JPY"
+          },
+          "eligibility": {
+            "studentTypes": ["学生", "教職員"],
+            "requirements": ["認定教育機関"]
+          },
+          "verificationMethod": "学生証明書",
+          "url": "https://www.autodesk.co.jp/education/edu-software/overview",
+          "status": "active",
+          "lastVerified": null,
+          "notes": "学生・教職員向け無料"
+        },
+        {
+          "id": "autodesk-fusion360",
+          "name": "Fusion 360",
+          "provider": "Autodesk",
+          "type": "license",
+          "discount": {
+            "type": "free",
+            "duration": "学生・教職員期間中",
+            "originalPrice": null,
+            "studentPrice": 0,
+            "currency": "JPY"
+          },
+          "eligibility": {
+            "studentTypes": ["学生", "教職員"],
+            "requirements": ["認定教育機関"]
+          },
+          "verificationMethod": "学生証明書",
+          "url": "https://www.autodesk.co.jp/education/edu-software/overview",
+          "status": "active",
+          "lastVerified": null,
+          "notes": "学生・教職員向け無料"
+        },
+        {
+          "id": "autodesk-3dsmax",
+          "name": "3ds Max",
+          "provider": "Autodesk",
+          "type": "license",
+          "discount": {
+            "type": "free",
+            "duration": "学生・教職員期間中",
+            "originalPrice": null,
+            "studentPrice": 0,
+            "currency": "JPY"
+          },
+          "eligibility": {
+            "studentTypes": ["学生", "教職員"],
+            "requirements": ["認定教育機関"]
+          },
+          "verificationMethod": "学生証明書",
+          "url": "https://www.autodesk.co.jp/education/edu-software/overview",
+          "status": "active",
+          "lastVerified": null,
+          "notes": "学生・教職員向け無料"
+        },
+        {
+          "id": "maxon-cinema4d",
+          "name": "Cinema 4D",
+          "provider": "Maxon",
+          "type": "license",
+          "discount": {
+            "type": "percentage",
+            "percentOff": 40,
+            "duration": "教育ライセンス期間中",
+            "originalPrice": null,
+            "studentPrice": null,
+            "currency": "JPY"
+          },
+          "eligibility": {
+            "studentTypes": ["学生", "教職員"],
+            "requirements": ["教育機関"]
+          },
+          "verificationMethod": "学生証明書",
+          "url": "https://www.maxon.net/ja/educational-licenses",
+          "status": "active",
+          "lastVerified": null,
+          "notes": "教育ライセンス40%オフ"
+        }
+      ]
+    },
+    {
+      "id": "music",
+      "name": "音楽・エンターテイメント",
+      "nameEn": "Music & Entertainment",
+      "icon": "🎵",
+      "services": [
+        {
+          "id": "spotify-premium-student",
+          "name": "Spotify Premium Student",
+          "provider": "Spotify",
+          "type": "subscription",
+          "discount": {
+            "type": "percentage",
+            "percentOff": 50,
+            "duration": "学生期間中",
+            "originalPrice": 980,
+            "studentPrice": 490,
+            "currency": "JPY"
+          },
+          "eligibility": {
+            "studentTypes": ["大学生", "短大生", "大学院生", "専門学校生", "高専生"],
+            "requirements": ["大学、短期大学、大学院、専門学校、高等専門学校の学生"],
+            "exclusions": ["高校生以下は対象外"]
+          },
+          "verificationMethod": "学生証明書",
+          "url": "https://www.spotify.com/jp/student/",
+          "status": "active",
+          "lastVerified": null,
+          "notes": "通常の半額程度、高校生以下は対象外"
+        },
+        {
+          "id": "youtube-music-student",
+          "name": "YouTube Music 学生プラン",
+          "provider": "YouTube Music",
+          "type": "subscription",
+          "discount": {
+            "type": "student-plan",
+            "duration": "学生期間中",
+            "originalPrice": null,
+            "studentPrice": null,
+            "currency": "JPY"
+          },
+          "eligibility": {
+            "studentTypes": ["学生"],
+            "requirements": ["学生証明"]
+          },
+          "verificationMethod": "学生証明書",
+          "url": "https://www.youtube.com/musicpremium",
+          "status": "active",
+          "lastVerified": null,
+          "notes": "通常プランより安価"
+        },
+        {
+          "id": "apple-music-student",
+          "name": "Apple Music 学生プラン",
+          "provider": "Apple",
+          "type": "subscription",
+          "discount": {
+            "type": "percentage",
+            "percentOff": 50,
+            "duration": "学生期間中",
+            "originalPrice": 1080,
+            "studentPrice": 540,
+            "currency": "JPY"
+          },
+          "eligibility": {
+            "studentTypes": ["大学生", "大学院生"],
+            "requirements": ["大学・大学院"]
+          },
+          "verificationMethod": "学生証明書",
+          "url": "https://www.apple.com/jp/apple-music/",
+          "status": "active",
+          "lastVerified": null,
+          "notes": "通常の半額程度"
+        },
+        {
+          "id": "amazon-music-student",
+          "name": "Amazon Music 学生プラン",
+          "provider": "Amazon",
+          "type": "subscription",
+          "discount": {
+            "type": "student-plan",
+            "duration": "学生期間中",
+            "originalPrice": null,
+            "studentPrice": null,
+            "currency": "JPY"
+          },
+          "eligibility": {
+            "studentTypes": ["学生"],
+            "requirements": ["Prime Student会員"]
+          },
+          "verificationMethod": "Prime Student認証",
+          "url": "https://www.amazon.co.jp/music/unlimited",
+          "status": "active",
+          "lastVerified": null,
+          "notes": "Prime Student会員向け特別価格"
+        },
+        {
+          "id": "awa-student",
+          "name": "AWA 学生プラン",
+          "provider": "AWA",
+          "type": "subscription",
+          "discount": {
+            "type": "student-plan",
+            "duration": "学生期間中",
+            "originalPrice": null,
+            "studentPrice": null,
+            "currency": "JPY"
+          },
+          "eligibility": {
+            "studentTypes": ["中学生", "高校生", "大学生"],
+            "requirements": ["中学生から学割適用可能"]
+          },
+          "verificationMethod": "学生証明書",
+          "url": "https://awa.fm/",
+          "status": "active",
+          "lastVerified": null,
+          "notes": "中学生から学割適用可能"
+        },
+        {
+          "id": "rakuten-music-student",
+          "name": "楽天ミュージック 学生プラン",
+          "provider": "楽天",
+          "type": "subscription",
+          "discount": {
+            "type": "student-plan",
+            "duration": "学生期間中",
+            "originalPrice": null,
+            "studentPrice": null,
+            "currency": "JPY"
+          },
+          "eligibility": {
+            "studentTypes": ["学生"],
+            "requirements": ["学生証明"]
+          },
+          "verificationMethod": "学生証明書",
+          "url": "https://music.rakuten.co.jp/",
+          "status": "active",
+          "lastVerified": null,
+          "notes": "学生プランあり"
+        },
+        {
+          "id": "tower-records-music-student",
+          "name": "TOWER RECORDS MUSIC 学生割引",
+          "provider": "TOWER RECORDS",
+          "type": "subscription",
+          "discount": {
+            "type": "student-discount",
+            "duration": "学生期間中",
+            "originalPrice": null,
+            "studentPrice": null,
+            "currency": "JPY"
+          },
+          "eligibility": {
+            "studentTypes": ["学生"],
+            "requirements": ["学生証明"]
+          },
+          "verificationMethod": "学生証明書",
+          "url": "https://music.tower.jp/",
+          "status": "active",
+          "lastVerified": null,
+          "notes": "学生割引あり"
+        }
+      ]
+    },
+    {
+      "id": "video",
+      "name": "動画配信",
+      "nameEn": "Video Streaming",
+      "icon": "📺",
+      "services": [
+        {
+          "id": "amazon-prime-video",
+          "name": "Amazon Prime Video (Prime Student)",
+          "provider": "Amazon",
+          "type": "subscription",
+          "discount": {
+            "type": "percentage",
+            "percentOff": 50,
+            "duration": "学生期間中",
+            "originalPrice": 4900,
+            "studentPrice": 2450,
+            "currency": "JPY",
+            "billingPeriod": "年間"
+          },
+          "eligibility": {
+            "studentTypes": ["大学生", "大学院生", "短大生", "専門学校生", "高専生"],
+            "requirements": ["日本国内の大学、大学院、短期大学、専門学校、高等専門学校の学生"]
+          },
+          "verificationMethod": "学生証明書",
+          "url": "https://www.amazon.co.jp/studentprime",
+          "status": "active",
+          "lastVerified": null,
+          "notes": "通常会員の半額（年間2,450円）"
+        }
+      ]
+    },
+    {
+      "id": "lifestyle",
+      "name": "ライフスタイル・サービス",
+      "nameEn": "Lifestyle & Services",
+      "icon": "🛍️",
+      "services": [
+        {
+          "id": "amazon-prime-student",
+          "name": "Amazon Prime Student",
+          "provider": "Amazon",
+          "type": "subscription",
+          "discount": {
+            "type": "percentage",
+            "percentOff": 50,
+            "duration": "学生期間中",
+            "originalPrice": 4900,
+            "studentPrice": 2450,
+            "currency": "JPY",
+            "billingPeriod": "年間"
+          },
+          "eligibility": {
+            "studentTypes": ["大学生", "大学院生", "短大生", "専門学校生", "高専生"],
+            "requirements": ["日本国内の高等教育機関の学生"]
+          },
+          "verificationMethod": "学生証明書、学校発行メールアドレス",
+          "url": "https://www.amazon.co.jp/studentprime",
+          "status": "active",
+          "lastVerified": null,
+          "features": ["Prime Video", "Prime Music", "お急ぎ便無料", "書籍ポイント還元"],
+          "notes": "年会費2,450円（通常の半額）、Prime Video、Prime Music、お急ぎ便無料など"
+        }
+      ]
+    },
+    {
+      "id": "learning",
+      "name": "学習・教育",
+      "nameEn": "Learning & Education",
+      "icon": "📚",
+      "services": [
+        {
+          "id": "chatgpt-plus-edu",
+          "name": "ChatGPT Plus（教育機関向け）",
+          "provider": "OpenAI",
+          "type": "subscription",
+          "discount": {
+            "type": "institutional",
+            "duration": "教育機関契約期間中",
+            "originalPrice": null,
+            "studentPrice": null,
+            "currency": "JPY"
+          },
+          "eligibility": {
+            "studentTypes": ["学生"],
+            "requirements": ["特定の教育機関"]
+          },
+          "verificationMethod": "教育機関経由",
+          "url": "https://openai.com/chatgpt/education/",
+          "status": "active",
+          "lastVerified": null,
+          "notes": "一部の教育機関では特別価格での提供あり"
+        },
+        {
+          "id": "notion-education",
+          "name": "Notion for Education",
+          "provider": "Notion",
+          "type": "subscription",
+          "discount": {
+            "type": "free",
+            "duration": "学生・教職員期間中",
+            "originalPrice": null,
+            "studentPrice": 0,
+            "currency": "JPY"
+          },
+          "eligibility": {
+            "studentTypes": ["学生", "教職員"],
+            "requirements": ["学校発行メールアドレス"]
+          },
+          "verificationMethod": "学校メールアドレス",
+          "url": "https://www.notion.so/ja-jp/product/notion-for-education",
+          "status": "active",
+          "lastVerified": null,
+          "notes": "学生・教職員向け無料プラン"
+        },
+        {
+          "id": "claude-pro-edu",
+          "name": "Claude Pro（教育機関向け）",
+          "provider": "Anthropic",
+          "type": "subscription",
+          "discount": {
+            "type": "institutional",
+            "duration": "教育機関契約期間中",
+            "originalPrice": null,
+            "studentPrice": null,
+            "currency": "JPY"
+          },
+          "eligibility": {
+            "studentTypes": ["学生"],
+            "requirements": ["特定の教育機関"]
+          },
+          "verificationMethod": "教育機関経由",
+          "url": "https://www.anthropic.com/",
+          "status": "active",
+          "lastVerified": null,
+          "notes": "教育機関向け特別プランあり"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "totalCategories": 7,
+    "totalServices": 38,
+    "maintainers": ["awesome-ja"],
+    "repository": "https://github.com/awesome-ja/gakuwari",
+    "license": "MIT"
+  }
+}
