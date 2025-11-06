@@ -1,0 +1,88 @@
+name: Link Checker
+
+on:
+  # Run on push to main branch
+  push:
+    branches:
+      - main
+  # Run on pull requests
+  pull_request:
+  # Run on schedule (every Monday at 9:00 AM JST / 00:00 UTC)
+  schedule:
+    - cron: '0 0 * * 1'
+  # Allow manual trigger
+  workflow_dispatch:
+
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check links in README.md
+        uses: lycheeverse/lychee-action@v1
+        with:
+          # Check all markdown files
+          args: |
+            --verbose
+            --no-progress
+            --exclude-mail
+            --exclude 'linkedin.com'
+            --exclude 'twitter.com'
+            --exclude 'facebook.com'
+            --exclude 'instagram.com'
+            --max-retries 3
+            --timeout 30
+            '**/*.md'
+          # Fail action on broken links
+          fail: true
+          # Output file for results
+          output: ./lychee-report.md
+
+      - name: Check links in JSON data
+        uses: lycheeverse/lychee-action@v1
+        with:
+          args: |
+            --verbose
+            --no-progress
+            --exclude-mail
+            --max-retries 3
+            --timeout 30
+            'data/**/*.json'
+          fail: false
+          output: ./lychee-data-report.md
+
+      - name: Create Issue on Failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            let report = '';
+
+            try {
+              report = fs.readFileSync('./lychee-report.md', 'utf8');
+            } catch (error) {
+              report = 'リンクチェックレポートの読み込みに失敗しました。';
+            }
+
+            const issue = await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: '🔗 リンク切れが検出されました',
+              body: `## リンクチェック結果\n\n自動リンクチェックでリンク切れが検出されました。\n\n### 詳細\n\n\`\`\`\n${report}\n\`\`\`\n\n---\n\n**実行日時**: ${new Date().toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo' })}\n**ワークフロー実行**: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+              labels: ['bug', 'automated', 'link-check']
+            });
+
+            console.log(`Issue created: ${issue.data.html_url}`);
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: link-check-report
+          path: |
+            lychee-report.md
+            lychee-data-report.md
+          retention-days: 30

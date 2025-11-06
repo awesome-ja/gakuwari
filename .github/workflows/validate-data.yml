@@ -1,0 +1,99 @@
+name: Validate Data
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'data/**'
+  pull_request:
+    paths:
+      - 'data/**'
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install ajv-cli
+        run: npm install -g ajv-cli ajv-formats
+
+      - name: Validate JSON against Schema
+        run: |
+          echo "Validating services.json against schema.json..."
+          ajv validate -s data/schema.json -d data/services.json --strict=false
+          echo "✅ Validation successful!"
+
+      - name: Check JSON formatting
+        run: |
+          echo "Checking JSON formatting..."
+          for file in data/*.json; do
+            if ! jq empty "$file" 2>/dev/null; then
+              echo "❌ Invalid JSON in $file"
+              exit 1
+            fi
+            echo "✅ $file is valid JSON"
+          done
+
+      - name: Verify metadata accuracy
+        run: |
+          echo "Verifying metadata counts..."
+          node -e "
+          const data = require('./data/services.json');
+
+          const actualCategories = data.categories.length;
+          const actualServices = data.categories.reduce((sum, cat) => sum + cat.services.length, 0);
+
+          console.log(\`Expected categories: \${data.metadata.totalCategories}, Actual: \${actualCategories}\`);
+          console.log(\`Expected services: \${data.metadata.totalServices}, Actual: \${actualServices}\`);
+
+          if (actualCategories !== data.metadata.totalCategories) {
+            console.error('❌ Metadata totalCategories does not match actual count!');
+            process.exit(1);
+          }
+
+          if (actualServices !== data.metadata.totalServices) {
+            console.error('❌ Metadata totalServices does not match actual count!');
+            process.exit(1);
+          }
+
+          console.log('✅ Metadata counts are accurate!');
+          "
+
+      - name: Check for duplicate IDs
+        run: |
+          echo "Checking for duplicate service IDs..."
+          node -e "
+          const data = require('./data/services.json');
+          const ids = new Set();
+          const duplicates = [];
+
+          data.categories.forEach(cat => {
+            cat.services.forEach(service => {
+              if (ids.has(service.id)) {
+                duplicates.push(service.id);
+              }
+              ids.add(service.id);
+            });
+          });
+
+          if (duplicates.length > 0) {
+            console.error(\`❌ Duplicate service IDs found: \${duplicates.join(', ')}\`);
+            process.exit(1);
+          }
+
+          console.log('✅ No duplicate IDs found!');
+          "
+
+      - name: Validation Success
+        if: success()
+        run: |
+          echo "🎉 All validation checks passed!"

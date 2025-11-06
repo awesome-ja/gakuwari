@@ -52,55 +52,36 @@ body:
       required: true
 
   - type: dropdown
-    id: browser
+    id: issue-type
     attributes:
-      label: ブラウザ
-      description: 使用しているブラウザを選択してください
+      label: 問題の種類
+      description: 問題の種類を選択してください
       options:
-        - Chrome
-        - Firefox
-        - Safari
-        - Edge
+        - 誤った情報（価格、条件など）
+        - リンク切れ
+        - 古い情報
+        - カテゴリ分類の誤り
         - その他（追加の詳細で指定してください）
     validations:
       required: true
 
   - type: input
-    id: browser-version
+    id: service-name
     attributes:
-      label: ブラウザバージョン
-      description: 使用しているブラウザのバージョンを教えてください
-      placeholder: 例: 91.0.4472.124
+      label: 対象サービス名
+      description: 問題が発生しているサービス名を教えてください
+      placeholder: 例: GitHub Student Developer Pack
     validations:
-      required: true
-
-  - type: dropdown
-    id: userscript-manager
-    attributes:
-      label: ユーザースクリプトマネージャー
-      description: 使用しているユーザースクリプトマネージャーを選択してください
-      options:
-        - Tampermonkey
-        - Greasemonkey
-        - Violentmonkey
-        - その他（追加の詳細で指定してください）
-    validations:
-      required: true
+      required: false
 
   - type: input
-    id: userscript-version
+    id: verified-date
     attributes:
-      label: 学割サービスのバージョン
-      description: 使用している学割サービスのバージョンを教えてください
-      placeholder: 例: 3.1.0
-
-  - type: textarea
-    id: console-errors
-    attributes:
-      label: コンソールエラー
-      description: コンソールエラーがあれば貼り付けてください（ブラウザでF12を押してください）
-      render: shell
-      placeholder: コンソールエラーをここに貼り付けてください...
+      label: 確認日
+      description: 問題を確認した日付を教えてください
+      placeholder: 例: 2025-11-05
+    validations:
+      required: false
 
   - type: textarea
     id: additional-context

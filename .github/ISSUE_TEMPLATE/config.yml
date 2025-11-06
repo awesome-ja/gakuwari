@@ -1,11 +1,11 @@
 blank_issues_enabled: false
 contact_links:
   - name: 💬 一般的な議論
-    url: https://github.com/URL-Note-Taker/core/discussions
+    url: https://github.com/awesome-ja/gakuwari/discussions
     about: コミュニティで質問や意見交換をする
   - name: 📖 ドキュメント
-    url: https://github.com/URL-Note-Taker/core/wiki
+    url: https://github.com/awesome-ja/gakuwari/wiki
     about: 詳細なドキュメントはWikiをご確認ください
   - name: 🔒 セキュリティ問題
-    url: https://github.com/URL-Note-Taker/core/issues
-    about: セキュリティの脆弱性はGitHub Issues経由で報告してください
+    url: https://github.com/awesome-ja/gakuwari/issues
+    about: セキュリティ関連の問題はGitHub Issues経由で報告してください
