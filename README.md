@@ -339,3 +339,16 @@ MIT License - 詳細は [LICENSE](LICENSE) ファイルをご覧ください。
 - 🤝 **情報提供**: どんな小さな情報でも他の学生の役に立ちます！
 
 **❤️ で作られ、学生コミュニティによってサポートされています**
+
+<!-- BEGIN gh-mutual-linking -->
+
+---
+
+### Related projects
+
+- [**japanese-interest-peak-analysis**](https://github.com/japanese-language/japanese-interest-peak-analysis) — Seasonality of global interest in Japan and the Japanese language, from 10.6 years of Wikipedia pageviews across 19 pages. Statistical analysis.
+- [**kana-transliterator**](https://github.com/html-js/kana-transliterator) — Single-file browser tool that transliterates Japanese kana into Cyrillic (Polivanov), Hepburn, French, and German
+- [**living**](https://github.com/awesome-germany/living)
+- [**universities**](https://github.com/awesome-nihon/universities)
+- [**sharehouses**](https://github.com/awesome-nihon/sharehouses)
+<!-- END gh-mutual-linking -->
